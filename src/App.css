@@ -1,0 +1,91 @@
+* {
+  background-color: #F7F2EE;
+  --background-color: #F7F2EE;
+  --formtext : #707070;
+  --rgb-616853500: #3D4435;
+}
+.navbar-wrapper .container .lan span,ul li .nav-link{
+  font-size: 20px;
+}
+ul li .nav-link:hover{
+  text-decoration: underline;
+}
+.formpage button{
+  background-color: #3D4435;
+  color: white;
+}
+.booking-required-text,.modal p{
+  color: var(--formtext);
+}
+div .gohomebutton{
+  background-color: var(--rgb-616853500);
+}
+div .gohomebutton:hover{
+  filter: invert(100%);
+}
+footer *,footer{
+  background-color: #0F110D;
+  color: white;
+}
+footer .container .row p{
+  font-size:16px;
+}
+.modal .modal-content{
+  background-color: var(--background-color);
+}
+.modal{
+  background-color:rgba(0, 0, 0, 0.7);
+}
+/* .formpage{ */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+/* } */
+/* .navabar-container{
+  padding-top: 56px;
+}
+.navabar-container,.navabar-container ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.navabar-container ul{
+  list-style: none;
+  gap: 2vw;
+} */
+/*
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
