@@ -71,7 +71,7 @@ function FormPage() {
                 </label>
                 <input
                     className="form-control bg-transparent"
-                    type="text"
+                    type="tel"
                     value={phone}
                     required
                     onChange={(e) => setPhone(e.target.value)}

@@ -5,7 +5,7 @@ function Footer() {
         <div>
             <footer className="mt-5 py-5">
                 <div className="container">
-                    <div className="row">
+                    <div className="row text-center text-md-start">
                         <div className="col-md-3 mb-3">
                             <img src={Logowh} className="color-white"/>
                         </div>
