@@ -5,6 +5,7 @@ import NavBar from './NavBar.jsx';
 import { BrowserRouter } from 'react-router';
 import FormPage from './FormPage.jsx';
 import Footer from './Footer.jsx';
+import Aboutus from './Aboutus.jsx';
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
       <BrowserRouter>
         <NavBar/>
         <FormPage />
-        <Footer/>
+        <Aboutus/> {/* that'll be put in different page */}
+        <Footer />
       </BrowserRouter>
     </>
   )
