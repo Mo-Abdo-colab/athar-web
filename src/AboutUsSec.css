@@ -176,7 +176,16 @@ html[dir="rtl"] #imgContainer img:last-child {
 @media (max-width: 1400px) {
   #cardContainer {
     padding: 0 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  #cardContainer p,
+  #cardContainer h2 {
+    text-align: center;
+  }
+
   #imgContainer {
     flex-direction: row;
     align-items: center;

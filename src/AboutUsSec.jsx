@@ -1,6 +1,6 @@
 import "./AboutUsSec.css";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom";
 function AboutUsSec() {
   const { t } = useTranslation();
 
@@ -11,9 +11,12 @@ function AboutUsSec() {
           <div className="col-lg-6 mb-4 mb-lg-0" id="cardContainer">
             <h2 className="fw-bold mb-3">{t("about.title")}</h2>
             <p className="mb-3">{t("about.para")}</p>
-            <a href="#" className="btn btn-dark rounded-pill px-4 py-2 mt-5">
+            <Link
+              to={"/about"}
+              className="btn btn-dark rounded-pill px-4 py-2 mt-5"
+            >
               {t("about.link")}
-            </a>
+            </Link>
           </div>
           <div className="col-lg-6">
             <div
