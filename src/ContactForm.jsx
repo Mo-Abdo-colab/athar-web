@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState, useMemo } from "react";
+import countryList from "react-select-country-list";
 import "./ContactForm.css";
 import { useTranslation } from "react-i18next";
 
@@ -15,6 +16,13 @@ function ContactForm() {
   });
   const [errors, setErrors] = useState({});
   const [showPopup, setShowPopup] = useState(false);
+
+  const [value, setValue] = useState("");
+  const options = useMemo(() => countryList().getData(), []);
+
+  const changeHandler = (e) => {
+    setValue(e.target.value);
+  };
 
   // Validation rules
   const validate = () => {
@@ -92,13 +100,17 @@ function ContactForm() {
             {t("contactus.countrycode")}
           </label>
           <select
-            id="countrycode"
             className="form-select"
-            value={form.countrycode}
-            onChange={handleChange}
+            value={value}
+            onChange={changeHandler}
+            id="countrycode"
           >
-            <option>Saudi Arabia</option>
-            <option>Egypt</option>
+            <option value="">{t("booking.phcountrycode")}</option>
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </div>
         <div className="col-md-6">

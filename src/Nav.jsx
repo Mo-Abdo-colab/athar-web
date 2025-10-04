@@ -10,82 +10,79 @@ function Nav() {
   const location = useLocation();
   return (
     <nav className="navbar-wrapper navbar navbar-expand-lg pt-4" id="subNav">
-      <div className="container">
-        <div>
-          <NavLink className="navbar-brand" to="/">
-            <img src={Logo} />
-          </NavLink>
+      <div className="container d-flex align-items-center justify-content-between flex-nowrap">
+        {/* Brand */}
+        <NavLink className="navbar-brand me-3 flex-shrink-0" to="/">
+          <img src={Logo} />
+        </NavLink>
+        {/* Toggle Button for mobile */}
+        <button
+          className="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        {/* Centered Nav links */}
+        <div
+          className="collapse navbar-collapse navbar-overlay justify-content-center navOverlay"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav gap-5 align-items-center mx-auto">
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link text-black" +
+                  (isActive ? " text-black text-decoration-underline" : "")
+                }
+                to="/"
+              >
+                {t("navbar.home")}
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link text-black" +
+                  (isActive ? " text-black text-decoration-underline" : "")
+                }
+                to="/about"
+              >
+                {t("navbar.about")}
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link text-black" +
+                  (isActive ? " text-black text-decoration-underline" : "")
+                }
+                to="/services"
+              >
+                {t("navbar.services")}
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                className={({ isActive }) =>
+                  "nav-link text-black" +
+                  (isActive ? " text-black text-decoration-underline" : "")
+                }
+                to="/contact"
+              >
+                {t("navbar.contact")}
+              </NavLink>
+            </li>
+          </ul>
         </div>
-        <div>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            id="navToggle"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto gap-5 ms-5">
-              <li className="nav-item">
-                <NavLink
-                  className={({ isActive }) =>
-                    "nav-link text-black" +
-                    (isActive
-                      ? " text-black text-decoration-underline"
-                      : "nav-link text-black")
-                  }
-                  to="/"
-                >
-                  {t("navbar.home")}
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className={({ isActive }) =>
-                    "nav-link text-black" +
-                    (isActive
-                      ? " text-black text-decoration-underline"
-                      : "nav-link text-black")
-                  }
-                  to="/about"
-                >
-                  {t("navbar.about")}
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className={({ isActive }) =>
-                    "nav-link text-black" +
-                    (isActive
-                      ? " text-black text-decoration-underline"
-                      : "nav-link text-black")
-                  }
-                  to="/services"
-                >
-                  {t("navbar.services")}
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  className={({ isActive }) =>
-                    "nav-link text-black" +
-                    (isActive
-                      ? " text-black text-decoration-underline"
-                      : "nav-link text-black")
-                  }
-                  to="/contact"
-                >
-                  {t("navbar.contact")}
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="lan gap-2 flex d-flex flex-row align-items-center">
+        {/* Right side: Language Switcher, Globe, and Appointment Button */}
+        <div className="d-flex align-items-center gap-2 flex-shrink-0 ms-3">
           <LanguageSwitcher />
-          <img src={globe} />
+          <img src={globe} alt="globe" />
           {location.pathname !== "/booking" && (
             <NavLink to="/booking" className="btn m-3" id="bookBtn">
               {t("navbar.button")}

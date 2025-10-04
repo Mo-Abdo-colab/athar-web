@@ -186,6 +186,12 @@ html[dir="rtl"] #imgContainer img:last-child {
     text-align: center;
   }
 
+  html[dir="rtl"] #cardContainer p,
+  html[dir="rtl"] #cardContainer h2 {
+    text-align: center;
+    width: auto;
+  }
+
   #imgContainer {
     flex-direction: row;
     align-items: center;

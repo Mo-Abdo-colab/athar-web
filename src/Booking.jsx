@@ -1,5 +1,6 @@
 import bookingimg from "./assets/booking-image.svg";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import countryList from "react-select-country-list";
 import verify from "./assets/verify.svg";
 import Nav from "./Nav";
 import { useTranslation } from "react-i18next";
@@ -7,24 +8,19 @@ import "./Booking.css";
 
 function FormPage() {
   const [showModal, setShowModal] = useState(false);
-  const [country, setCountry] = useState("Saudi Arabia");
-  const [phone, setPhone] = useState("+966");
+  const [phone, setPhone] = useState("");
   const { t } = useTranslation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowModal(true);
   };
-  const handleCountryChange = (e) => {
-    const selected = e.target.value;
-    setCountry(selected);
-    if (selected === "Egypt") {
-      setPhone("+20");
-    } else if (selected === "Saudi Arabia") {
-      setPhone("+966");
-    } else {
-      setPhone("");
-    }
+
+  const [value, setValue] = useState("");
+  const options = useMemo(() => countryList().getData(), []);
+
+  const changeHandler = (e) => {
+    setValue(e.target.value);
   };
   return (
     <div id="booking">
@@ -66,12 +62,16 @@ function FormPage() {
               <div className="col-md-6 col-6">
                 <label className="form-label">{t("booking.countrycode")}</label>
                 <select
-                  className="form-select bg-transparent d-flex flex-row justify-content-end align-items-center px-3 py-2 gap-2 border border-dark rounded-4 align-self-stretch"
-                  value={country}
-                  onChange={handleCountryChange}
+                  className="form-select form-control bg-transparent d-flex flex-row justify-content-end align-items-center px-3 py-2 gap-2 border border-dark rounded-4 align-self-stretch"
+                  value={value}
+                  onChange={changeHandler}
                 >
-                  <option>Saudi Arabia</option>
-                  <option>Egypt</option>
+                  <option value="">{t("booking.phcountrycode")}</option>
+                  {options.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
                 </select>
               </div>
 
@@ -86,6 +86,7 @@ function FormPage() {
                   className="form-control bg-transparent d-flex flex-row justify-content-end align-items-center px-3 py-2 gap-2 border border-dark rounded-4 align-self-stretch"
                   type="tel"
                   value={phone}
+                  placeholder={t("booking.phphone")}
                   required
                   onChange={(e) => setPhone(e.target.value)}
                 />
