@@ -1,0 +1,115 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "button": "Book an appointment"
+  },
+  "hero": {
+    "title": "\" Leave an Ather in Every Detail \"  Specialists in Interior Design, Furniture, Curtains and Maintenance",
+    "link": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "para": "At Ather, we are committed to delivering high-quality furniture and curtain design, manufacturing, and maintenance services. With a team of experienced engineers and skilled technicians, we blend creativity with craftsmanship to bring elegance and comfort into every home. We believe that every detail leaves an Ather.",
+    "link": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "cardtitle1": "Interior Design",
+    "cardtitle2": "Furniture & Curtains Care",
+    "cardtitle3": "Furnishings & Curtains",
+    "cardpara1": "Providing engineering drawings, 3D designs, proposals and consultations.",
+    "cardpara2": "Larger interior furnishings, upholstery fabrics, and grass maintenance. ",
+    "cardpara3": "Custom furniture and curtains made to your design with high quality.",
+    "link": "Book an appointment"
+  },
+  "choose": {
+    "title": "Why Choose Us?",
+    "header1": " Experience You Can Trust",
+    "header2": "High Quality Materials",
+    "header3": " Complete Care",
+    "header4": "Tailored to Your Style",
+    "para1": " Years of expertise in furniture and curtain design and services.",
+    "para2": "We use premium fabrics and finishing for lasting comfort.",
+    "para3": " From design to manufacturing and maintenance – all in one place.",
+    "para4": " Custom solutions made to fit your home and taste."
+  },
+  "contactus": {
+    "title": "CONTACT US",
+    "para": "Interested in working together? Fill out some info and we will be in touch shortly. We can’t wait to hear from you!",
+    "emailus": "Email Us",
+    "call": "Call Us",
+    "fname": "First Name (required)",
+    "lname": "Last Name (required)",
+    "countrycode": "Country Code",
+    "phone": "Phone (required)",
+    "email": "Email",
+    "address": "National Address (required) ",
+    "message": "Message (required) ",
+    "phfname": "Enter your first name",
+    "phlname": "Enter your last name",
+    "phemail": "Enter your email",
+    "phaddress": "Enter your address",
+    "phphone": "Enter your phone number",
+    "link": "Submit"
+  },
+  "contactpopup": {
+    "title": "Thank you!",
+    "desc": "Your information will be sent and you will be contacted soon.",
+    "link": "OK"
+  },
+  "footer": {
+    "about": {
+      "about": "About",
+      "ourcompany": "Our Company",
+      "ourstory": "Our Story",
+      "blog": "Blog"
+    },
+    "information": {
+      "information": "Information",
+      "cr": "Commercial Registration: 1010046507",
+      "po": "P.O. Box: 6680",
+      "ry": "Riyadh: 11452",
+      "tele": "Telephone: 2164454",
+      "mobile": "Mobile: 0596475546"
+    },
+    "location": {
+      "location": "Location",
+      "address": "4034, Al Olaya, Riyadh Kingdom of Saudi Arabia."
+    },
+
+    "contact": "Contact"
+  },
+  "aboutsection": {
+    "about": "About Us",
+    "para1": "Excellence is not an option... it's the foundation of every detail. At Athar, we believe that every space tells a story — and our mission is to make yours unforgettable. We don’t just design or manufacture furniture; we create experiences that bring comfort, elegance, and functionality together in perfect harmony.",
+    "para2": "From meticulous interior design to custom furniture & curtains, and from upholstery to complete maintenance solutions, our team of skilled engineers and craftsmen work with passion and precision to deliver results that last.Choose professionalism. Choose quality. Choose “Ather” because your space deserves nothing less than excellence."
+  },
+  "servicesSec": {
+    "subtitle": "Because all you'll ever buy is an oil well ...",
+    "para1": "We don't just offer interior design or maintenance; we create an experience that honors your taste, combining heritage, nature, and quality.",
+    "para2": "We believe that every detail in the spider's nest is carefully considered. We strive to provide solutions that range from sophisticated design to meticulous care for every piece of furniture, creating an environment where you can live with pride, an oasis."
+  },
+  "booking": {
+    "fname": "First Name",
+    "lname": "Last Name",
+    "countrycode": "Country Code",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "National Address",
+    "required": "(Required)",
+    "button": "Confirm Booking",
+    "phfname": "Enter your first name",
+    "phlname": "Enter your last name",
+    "phemail": "Enter your email",
+    "phaddress": "Enter your address"
+  },
+  "popup": {
+    "title": "Booking Confirmed",
+    "para": "Thank you for choosing Athar. Our team will contact you shortly to schedule a site visit and confirm all the details.",
+    "editbtn": "Edit booking",
+    "confirmbtn": "Go home"
+  }
+}

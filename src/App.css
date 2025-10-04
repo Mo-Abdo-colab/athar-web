@@ -1,59 +1,10 @@
-* {
-  background-color: #F7F2EE;
-  --background-color: #F7F2EE;
-  --formtext : #707070;
-  --rgb-616853500: #3D4435;
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
-.navbar-wrapper .container .lan span,ul li .nav-link{
-  font-size: 20px;
-}
-ul li .nav-link:hover{
-  text-decoration: underline;
-}
-.formpage button{
-  background-color: #3D4435;
-  color: white;
-}
-.booking-required-text,.modal p{
-  color: var(--formtext);
-}
-div .gohomebutton{
-  background-color: var(--rgb-616853500);
-}
-div .gohomebutton:hover{
-  filter: invert(100%);
-}
-footer *,footer{
-  background-color: #0F110D;
-  color: white;
-}
-footer .container .row p{
-  font-size:16px;
-}
-.modal .modal-content{
-  background-color: var(--background-color);
-}
-.modal{
-  background-color:rgba(0, 0, 0, 0.7);
-}
-/* .formpage{ */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-/* } */
-/* .navabar-container{
-  padding-top: 56px;
-}
-.navabar-container,.navabar-container ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-.navabar-container ul{
-  list-style: none;
-  gap: 2vw;
-} */
-/*
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -89,3 +40,79 @@ footer .container .row p{
 .read-the-docs {
   color: #888;
 } */
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+.navbar-wrapper .container .lan span,
+ul li .nav-link {
+  font-size: 20px;
+  color: white;
+}
+ul li .nav-link:hover {
+  text-decoration: underline;
+}
+
+.wide-navbar {
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#bookBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+
+  width: 195px;
+  height: 48px;
+
+  background: #e7d9cb;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+@media (max-width: 1200px) {
+  #bookBtn {
+    display: none;
+  }
+}
+
+footer *,
+footer {
+  background-color: #0f110d;
+  color: white;
+  height: auto;
+}
+footer .container .row p {
+  font-size: 16px;
+}
+.modal .modal-content {
+  background-color: var(--background-color);
+}
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#footerLogo {
+  margin: 0 auto;
+  width: 180px;
+  height: 72px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

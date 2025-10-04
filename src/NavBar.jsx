@@ -1,46 +1,79 @@
-import Logo from './assets/logo.svg'
-import { Link } from 'react-router-dom'
-import downarrow from './assets/arrow-down.svg'
-import globe from './assets/icon-global.svg'
-
+import NavLogo from "./assets/NavLogo.png";
+import { NavLink } from "react-router-dom";
+import globe from "./assets/icon-global.svg";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./components/languageSwitcher/LanguageSwitcher";
 
 function NavBar() {
-    return (
-        <nav className="navbar-wrapper navbar navbar-expand-lg mt-3">
-            <div className="container">
-                <div>
-                    <Link className="navbar-brand" to="/"><img src={Logo}/></Link>
-                </div>
-                <div>
-                    <button className="navbar-toggler" type="button" 
-                        data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav me-auto">
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/services">Services</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/contact">Contact</Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div className="lan gap-2 flex d-flex flex-row align-items-center">
-                    <img src={downarrow} className=""/>
-                    <span>EN</span>
-                    <img src={globe}/>
-                </div>
-            </div>
-        </nav>
-    )
+  const { t } = useTranslation();
+  return (
+    <nav className="navbar-wrapper navbar navbar-expand-lg mt-4 wide-navbar">
+      <div className="container-fluid">
+        <div>
+          <NavLink className="navbar-brand" to="/">
+            <img src={NavLogo} />
+          </NavLink>
+        </div>
+        <div>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav me-auto gap-5">
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    "nav-link" +
+                    (isActive ? " text-white text-decoration-underline" : "")
+                  }
+                  to="/"
+                >
+                  {t("navbar.home")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    "nav-link" +
+                    (isActive ? " text-white text-decoration-underline" : "")
+                  }
+                  to="/about"
+                >
+                  {t("navbar.about")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    "nav-link" +
+                    (isActive ? " text-white text-decoration-underline" : "")
+                  }
+                  to="/services"
+                >
+                  {t("navbar.services")}
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink
+                  className={({ isActive }) =>
+                    "nav-link" +
+                    (isActive ? " text-white text-decoration-underline" : "")
+                  }
+                  to="/contact"
+                >
+                  {t("navbar.contact")}
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="lan gap-2 flex d-flex flex-row align-items-center">
+          <LanguageSwitcher />
+          <img src={globe} />
+          <NavLink to="/booking" className="btn  m-3" id="bookBtn">
+            {t("navbar.button")}
+          </NavLink>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
-export default NavBar
+export default NavBar;

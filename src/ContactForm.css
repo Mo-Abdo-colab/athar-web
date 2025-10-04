@@ -1,0 +1,129 @@
+.formSec {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  padding-top: 50px;
+  gap: 32px;
+}
+
+#fname,
+#lname,
+#phone,
+#countrycode,
+#email,
+#address,
+#message {
+  width: 100% !important;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#fname,
+#lname,
+#phone,
+#countrycode {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+
+  width: 350px;
+  height: 48px;
+  border: 1px solid #0d0e0b;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#email,
+#address {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+
+  width: 740px;
+  height: 48px;
+  border: 1px solid #0d0e0b;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#message {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+
+  width: 723px;
+  height: 200px;
+  border: 1px solid #0d0e0b;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.submitBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 40px;
+  gap: 8px;
+  border: none;
+
+  width: 134px;
+  height: 48px;
+  background: #e7d9cb;
+  border-radius: 16px;
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #0d0e0b;
+}
+
+#fname,
+#lname,
+#phone,
+#countrycode,
+#email,
+#address,
+#message {
+  background-color: transparent;
+}
+
+html[dir="rtl"] .formSec,
+.submitBtn {
+  font-family: "IBM Plex Sans Arabic";
+}
+
+@media (max-width: 991.98px) {
+  .formSec {
+    padding-top: 32px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

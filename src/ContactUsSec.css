@@ -1,0 +1,235 @@
+.ContactUsSec {
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  background: #f7f2ee;
+  flex: none;
+  order: 4;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.innerContact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 32px;
+
+  position: relative;
+  width: 1280px;
+  height: 735px;
+}
+
+.infoSec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.infoSec h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #0d0e0b;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+html[dir="rtl"] .infoSec h2 {
+  width: auto;
+
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: right;
+
+  color: #0d0e0b;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+#contactPara {
+  width: 525px;
+  height: 90px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #0d0e0b;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+html[dir="rtl"] #contactPara {
+  width: auto;
+
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: right;
+
+  color: #0d0e0b;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.infoSec .email h5,
+.infoSec .call h5 {
+  font-family: "IBM Plex Sans Arabic";
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  width: 431px;
+  height: 146px;
+
+  background: #3d4435;
+  border-radius: 24px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.email img {
+  width: 32px;
+  height: 32px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.email h5 {
+  width: 299px;
+  height: 29px;
+
+  font-family: "Inter";
+  font-style: normal;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #f7f2ee;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.email p {
+  width: 321px;
+  height: 29px;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #f7f2ee;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.call {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  padding-top: 40px;
+  gap: 8px;
+
+  width: 431px;
+  height: 146px;
+  border: 1px solid #0d0e0b;
+  border-radius: 24px;
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.call h5 {
+  width: 81px;
+  height: 29px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+
+  color: #3d4435;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.call p {
+  height: 29px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #3d4435;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+@media (max-width: 1200px) {
+  #contactPara {
+    width: 100%;
+  }
+  html[dir="rtl"] .infoSec h2 {
+    text-align: center;
+  }
+
+  html[dir="rtl"] #contactPara {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .infoSec {
+    text-align: center;
+    align-items: center;
+  }
+
+  #contactPara {
+    width: 100%;
+  }
+}

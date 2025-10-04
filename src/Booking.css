@@ -1,0 +1,43 @@
+#booking {
+  background-color: #f7f2ee;
+}
+
+#subBtn {
+  background-color: #3d4435;
+  color: white;
+  border: none;
+}
+
+#goHomeBtn {
+  width: 178px;
+  height: 48px;
+  background: #3d4435;
+  border-radius: 16px;
+  gap: 10px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  color: white;
+  border: none;
+}
+
+#editBtn {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 10px;
+
+  width: 174px;
+  height: 48px;
+
+  border: 1px solid #0b0515;
+  border-radius: 16px;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

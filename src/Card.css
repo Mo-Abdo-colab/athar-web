@@ -1,0 +1,50 @@
+#cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px 8px;
+  gap: 16px;
+
+  width: 305px;
+  height: 270px;
+  background: #3d4435;
+  border-radius: 16px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+#cardElements h5 {
+  width: 305px;
+  height: 29px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: #f7f2ee;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+#cardElements p {
+  width: 289px;
+  height: 87px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin-top: 15px;
+  color: #f7f2ee;
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}

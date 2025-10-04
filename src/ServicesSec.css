@@ -1,0 +1,56 @@
+.ourServices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 56px 80px;
+  gap: 16px;
+  background: #3d4435;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.titleContainer h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 68px;
+  color: #f7f2ee;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+html[dir="rtl"] .titleContainer h2 {
+  width: 1280px;
+  height: 84px;
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 84px;
+  text-align: right;
+  color: #f7f2ee;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+@media (max-width: 1200px) {
+  .titleContainer {
+    text-align: center;
+  }
+  html[dir="rtl"] .titleContainer h2 {
+    width: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    text-align: center;
+  }
+}

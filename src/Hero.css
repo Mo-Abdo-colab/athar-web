@@ -1,0 +1,75 @@
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 772px;
+  width: 100%;
+
+  background-image: linear-gradient(
+      rgba(61, 68, 53, 0.6),
+      rgba(61, 68, 53, 0.6)
+    ),
+    url("./assets/background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.heroCard h2 {
+  width: 890px;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+  font-family: "Poppins";
+
+  color: #f7f2ee;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+html[dir="rtl"] .heroCard h2 {
+  width: 500px;
+  height: auto;
+
+  font-family: "IBM Plex Sans Arabic";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  text-align: center;
+
+  color: #f7f2ee;
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.heroCard a {
+  background-color: #e7d9cb;
+  padding: 8px 22px;
+  border-radius: 16px;
+}
+
+html[dir="rtl"] .heroCarda {
+  font-family: "inter";
+}
+
+@media (max-width: 1200px) {
+  .heroCard h2 {
+    width: auto;
+  }
+
+  html[dir="rtl"] .heroCard h2 {
+    width: auto;
+  }
+}

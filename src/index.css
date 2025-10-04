@@ -66,3 +66,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+@font-face {
+  font-family: "IBM Plex Sans Arabic";
+  src: url("/fonts/IBMPlexSansArabic-Regular.ttf") format("truetype");
+}
+html[dir="rtl"],
+body[dir="rtl"],
+.rtl {
+  font-family: "IBM Plex Sans Arabic", Arial, sans-serif !important;
+}
