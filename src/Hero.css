@@ -70,6 +70,6 @@ html[dir="rtl"] .heroCarda {
   }
 
   html[dir="rtl"] .heroCard h2 {
-    width: auto;
+    width: 500px;
   }
 }

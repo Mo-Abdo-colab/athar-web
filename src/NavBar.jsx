@@ -7,13 +7,11 @@ import LanguageSwitcher from "./components/languageSwitcher/LanguageSwitcher";
 function NavBar() {
   const { t } = useTranslation();
   return (
-    <nav className="navbar-wrapper navbar navbar-expand-lg mt-4 wide-navbar">
+    <nav className="navbar-wrapper navbar navbar-expand-lg mt-4 wide-navbar navbar-dark">
       <div className="container-fluid d-flex align-items-center justify-content-between ">
-        {/* Brand */}
         <NavLink className="navbar-brand me-3" to="/">
           <img src={NavLogo} />
         </NavLink>
-        {/* Toggle Button for mobile */}
         <button
           className="navbar-toggler d-lg-none"
           type="button"
@@ -25,7 +23,7 @@ function NavBar() {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        {/* Centered Nav links */}
+
         <div
           className="collapse navbar-collapse navbar-overlay justify-content-center"
           id="navbarNav"

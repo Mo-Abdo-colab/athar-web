@@ -203,6 +203,13 @@ html[dir="rtl"] #imgContainer img:last-child {
     height: 80v;
     border-radius: 16px !important;
   }
+
+  #firstImg,
+  #secondImg,
+  #thirdImg {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -224,13 +231,14 @@ html[dir="rtl"] #imgContainer img:last-child {
     width: auto;
   }
   #imgContainer {
+    width: 100% !important;
     height: auto;
     gap: 8px;
   }
   #imgContainer #firstImg,
   #imgContainer #secondImg,
   #imgContainer #thirdImg {
-    width: 90px;
+    width: 120px;
     height: 120px;
     min-width: 0;
     max-width: 100%;
