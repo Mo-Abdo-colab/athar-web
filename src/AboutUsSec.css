@@ -96,6 +96,7 @@ html[dir="rtl"] #cardContainer p {
   height: 546px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
   align-items: stretch;

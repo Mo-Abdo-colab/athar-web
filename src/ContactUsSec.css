@@ -105,7 +105,7 @@ html[dir="rtl"] #contactPara {
   justify-content: center;
   align-items: center;
   padding: 24px;
-  width: 431px;
+  width: 95%;
   height: 146px;
 
   background: #3d4435;
@@ -167,7 +167,7 @@ html[dir="rtl"] #contactPara {
   padding-top: 40px;
   gap: 8px;
 
-  width: 431px;
+  width: 95%;
   height: 146px;
   border: 1px solid #0d0e0b;
   border-radius: 24px;

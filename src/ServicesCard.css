@@ -5,7 +5,7 @@
   align-items: flex-start;
   padding: 16px;
   gap: 25px;
-  width: 413px;
+  /* width: 413px; */
   height: 506px;
   border: 1px solid #f7f2ee;
   border-radius: 32px;
@@ -16,59 +16,65 @@
 }
 
 #serviceCard img {
-  width: 381px;
+  /* width: 381px; */
   height: 260px;
   background: url(7.jpg);
   border-radius: 16px;
   flex: none;
   order: 0;
-  align-self: stretch;
+  /* align-self: stretch; */
+  background-size: cover;
   flex-grow: 0;
 }
-
+#serviceCard .servicescardtext{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-between;
+}
 #serviceCard h5 {
-  width: 381px;
-  height: 39px;
+  /* width: 381px; */
+  /* height: 39px; */
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
-  line-height: 39px;
+  /* line-height: 39px; */
   color: #f7f2ee;
   flex: none;
   order: 0;
-  align-self: stretch;
+  /* align-self: stretch; */
   flex-grow: 0;
 }
 
 html[dir="rtl"] #serviceCard h5 {
-  width: 381px;
-  height: 39px;
+  /* width: 381px; */
+  /* height: 39px; */
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
-  line-height: 39px;
+  /* line-height: 39px; */
   text-align: right;
   color: #f7f2ee;
   flex: none;
   order: 0;
-  align-self: stretch;
+  /* align-self: stretch; */
   flex-grow: 0;
 }
 
 #serviceCard p {
-  width: 381px;
-  height: 54px;
+  /* width: 381px; */
+  /* height: 54px; */
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
-  line-height: 150%;
+  /* line-height: 150%; */
   color: #f7f2ee;
   flex: none;
   order: 1;
-  align-self: stretch;
+  /* align-self: stretch; */
   flex-grow: 0;
 }
 
@@ -76,9 +82,10 @@ html[dir="rtl"] #serviceCard h5 {
   padding: 10px;
   gap: 10px;
   border: none;
-  margin: 0 auto;
-  width: 183px;
-  height: 48px;
+  align-self: flex-start;
+  /* margin: 0 auto; */
+  /* width: 183px; */
+  /* height: 48px; */
   background: #e7d9cb;
   border-radius: 16px;
   color: black;
@@ -96,6 +103,7 @@ html[dir="rtl"] #serviceCard p,
   #serviceCard {
     margin-left: 60px;
     margin-bottom: 10px;
+    height: 560px;
   }
 }
 
@@ -103,5 +111,6 @@ html[dir="rtl"] #serviceCard p,
   #serviceCard {
     margin-left: 10px;
     margin-bottom: 10px;
+    height: 600px;
   }
 }

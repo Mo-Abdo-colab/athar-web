@@ -8,7 +8,7 @@ function NavBar() {
   const { t } = useTranslation();
   return (
     <nav className="navbar-wrapper navbar navbar-expand-lg mt-4 wide-navbar navbar-dark">
-      <div className="container-fluid d-flex align-items-center justify-content-between ">
+      <div className="container d-flex align-items-center justify-content-between ">
         <NavLink className="navbar-brand me-3" to="/">
           <img src={NavLogo} />
         </NavLink>

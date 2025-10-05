@@ -8,7 +8,7 @@ function Hero() {
   return (
     <div className="heroSection">
       <Navbar />
-      <div className="container-fluid d-flex align-items-center justify-content-center min-vh-100">
+      <div className="container d-flex align-items-center justify-content-center min-vh-100">
         <div className="heroCard text-center text-white">
           <h2 className="display-3 fw-bold mb-4">{t("hero.title")}</h2>
           <Link to={"/services"} className="btn text-decoration-none">
