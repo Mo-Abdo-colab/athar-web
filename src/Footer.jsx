@@ -1,6 +1,15 @@
+import { Link } from "react-router-dom";
 import FooterLogo from "./assets/FooterLogo.png";
 import { useTranslation } from "react-i18next";
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const { t } = useTranslation();
   return (
     <div>
@@ -15,19 +24,19 @@ function Footer() {
               <h6 className="fw-bold fs-4 mb-3">{t("footer.about.about")}</h6>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#" className="text-light text-decoration-none">
+                  <Link to="/about" className="text-light text-decoration-none" onClick={scrollToTop}>
                     {t("footer.about.ourcompany")}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-light text-decoration-none">
+                  <Link to="/about" className="text-light text-decoration-none" onClick={scrollToTop}>
                     {t("footer.about.ourstory")}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-light text-decoration-none">
+                  <Link to="/services" className="text-light text-decoration-none" onClick={scrollToTop}>
                     {t("footer.about.blog")}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -20,7 +20,7 @@
 }
 
 .heroCard h2 {
-  /* width: 890px; */
+  width: min(890px,75vw);
   font-weight: 600;
   font-size: 48px;
   line-height: 64px;
