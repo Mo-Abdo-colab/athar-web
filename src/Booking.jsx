@@ -156,7 +156,12 @@ function FormPage() {
                   <button
                     className="btn  btn-outline-dark d-flex flex-row justify-content-center align-items-center px-3 py-2 gap-2 rounded-4"
                     id="goHomeBtn"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => {
+                      setShowModal(false);
+                      setPhone("");
+                      setValue("");
+                      document.querySelector("form").reset();
+                    }}
                   >
                     {t("popup.confirmbtn")}
                   </button>

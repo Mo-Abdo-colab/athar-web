@@ -57,6 +57,20 @@ function ContactForm() {
       setShowPopup(true);
     }
   };
+  const handleSubmitok = () => {
+    setShowPopup(false);
+    setForm({
+      fname: "",
+      lname: "",
+      countrycode: "Saudi Arabia",
+      phone: "",
+      email: "",
+      address: "",
+      message: "",
+    });
+    setErrors({});
+    setValue("");
+  }
 
   return (
     <div className="formSec">
@@ -195,7 +209,7 @@ function ContactForm() {
             <p>{t("contactpopup.desc")}</p>
             <button
               className="btn btn-dark"
-              onClick={() => setShowPopup(false)}
+              onClick={handleSubmitok}
             >
               {t("contactpopup.link")}
             </button>

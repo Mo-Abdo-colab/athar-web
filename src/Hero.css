@@ -36,7 +36,7 @@
 }
 
 html[dir="rtl"] .heroCard h2 {
-  /* width: 500px; */
+  width: min(500px,75vw); /* for mob view */
   height: auto;
 
   font-family: "IBM Plex Sans Arabic";
