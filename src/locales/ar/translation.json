@@ -105,7 +105,9 @@
     "phemail": "أدخل بريدك الإلكتروني",
     "phaddress": "أدخل العنوان هنا",
     "phphone": "أدخل رقم هاتفك",
-    "phcountrycode": "أدخل إسم الدولة"
+    "phcountrycode": "أدخل إسم الدولة",
+    "Select Location": "اختر الموقع",
+    "Select This Location": "اختر هذا الموقع"
   },
   "popup": {
     "title": "تم تأكيد الحجز",

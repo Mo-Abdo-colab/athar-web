@@ -1,4 +1,4 @@
-import NavLogo from "./assets/NavLogo.png";
+import NavLogo from "./assets/logo-wh.svg";
 import { NavLink } from "react-router-dom";
 import globe from "./assets/icon-global.svg";
 import { useTranslation } from "react-i18next";

@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import countryList from "react-select-country-list";
 import "./ContactForm.css";
 import { useTranslation } from "react-i18next";
+import API_URL from "./config";
 
 function ContactForm() {
   const { t } = useTranslation();
@@ -17,11 +18,12 @@ function ContactForm() {
   const [errors, setErrors] = useState({});
   const [showPopup, setShowPopup] = useState(false);
 
-  const [value, setValue] = useState("");
   const options = useMemo(() => countryList().getData(), []);
 
-  const changeHandler = (e) => {
-    setValue(e.target.value);
+  // Unified change handler for all fields
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
   // Validation rules
@@ -44,19 +46,29 @@ function ContactForm() {
     return newErrors;
   };
 
-  const handleChange = (e) => {
-    const { id, value } = e.target;
-    setForm((prev) => ({ ...prev, [id]: value }));
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {
-      setShowPopup(true);
+      // Send data to backend
+      try {
+        const response = await fetch(`${API_URL}/contact`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(form),
+        });
+        if (response.ok) {
+          setShowPopup(true);
+        } else {
+          alert("Failed to submit. Please try again.");
+        }
+      } catch (error) {
+        alert("Server error. Please try again.");
+      }
     }
   };
+
   const handleSubmitok = () => {
     setShowPopup(false);
     setForm({
@@ -69,8 +81,7 @@ function ContactForm() {
       message: "",
     });
     setErrors({});
-    setValue("");
-  }
+  };
 
   return (
     <div className="formSec">
@@ -83,6 +94,7 @@ function ContactForm() {
             type="text"
             className={`form-control${errors.fname ? " is-invalid" : ""}`}
             id="fname"
+            name="fname"
             value={form.fname}
             onChange={handleChange}
             placeholder={t("contactus.phfname")}
@@ -100,6 +112,7 @@ function ContactForm() {
             type="text"
             className={`form-control${errors.lname ? " is-invalid" : ""}`}
             id="lname"
+            name="lname"
             value={form.lname}
             onChange={handleChange}
             required
@@ -115,8 +128,9 @@ function ContactForm() {
           </label>
           <select
             className="form-select"
-            value={value}
-            onChange={changeHandler}
+            name="countrycode"
+            value={form.countrycode}
+            onChange={handleChange}
             id="countrycode"
           >
             <option value="">{t("booking.phcountrycode")}</option>
@@ -135,6 +149,7 @@ function ContactForm() {
             type="text"
             className={`form-control${errors.phone ? " is-invalid" : ""}`}
             id="phone"
+            name="phone"
             value={form.phone}
             onChange={handleChange}
             required
@@ -152,6 +167,7 @@ function ContactForm() {
             type="email"
             className={`form-control${errors.email ? " is-invalid" : ""}`}
             id="email"
+            name="email"
             value={form.email}
             onChange={handleChange}
             placeholder={t("contactus.phemail")}
@@ -169,6 +185,7 @@ function ContactForm() {
             type="text"
             className={`form-control${errors.address ? " is-invalid" : ""}`}
             id="address"
+            name="address"
             value={form.address}
             onChange={handleChange}
             placeholder={t("contactus.phaddress")}

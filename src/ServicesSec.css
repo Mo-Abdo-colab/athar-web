@@ -24,7 +24,7 @@
 }
 
 html[dir="rtl"] .titleContainer h2 {
-  width: 1280px;
+  /* width: 1280px; */
   height: 84px;
   font-family: "IBM Plex Sans Arabic";
   font-style: normal;
@@ -40,6 +40,9 @@ html[dir="rtl"] .titleContainer h2 {
 }
 
 @media (max-width: 1200px) {
+  .ourServices {
+    padding: 40px;
+  }
   .titleContainer {
     text-align: center;
   }
@@ -50,7 +53,26 @@ html[dir="rtl"] .titleContainer h2 {
 }
 
 @media (max-width: 768px) {
-  .titleContainer {
+  .ourServices {
+    padding: 30px 20px; 
+  }
+  .titleContainer h2 ,html[dir="rtl"] .titleContainer h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    height: auto;
     text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ourServices {
+    padding: 30px 15px;
+  }
+
+  .titleContainer h2,
+  html[dir="rtl"] .titleContainer h2 {
+    font-size: 32px;
+    line-height: 1.2;
   }
 }

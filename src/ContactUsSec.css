@@ -16,8 +16,8 @@
   gap: 32px;
 
   position: relative;
-  width: 1280px;
-  height: 735px;
+  /* width: 1280px; */
+  /* height: 735px; */
 }
 
 .infoSec {
@@ -63,8 +63,8 @@ html[dir="rtl"] .infoSec h2 {
 }
 
 #contactPara {
-  width: 525px;
-  height: 90px;
+  width: 100%;
+  /* height: 90px; */
 
   font-family: "Inter";
   font-style: normal;
@@ -106,7 +106,7 @@ html[dir="rtl"] #contactPara {
   align-items: center;
   padding: 24px;
   width: 95%;
-  height: 146px;
+  height: auto;
 
   background: #3d4435;
   border-radius: 24px;
@@ -126,8 +126,8 @@ html[dir="rtl"] #contactPara {
 }
 
 .email h5 {
-  width: 299px;
-  height: 29px;
+  width: auto;
+  height: auto;
 
   font-family: "Inter";
   font-style: normal;
@@ -142,13 +142,13 @@ html[dir="rtl"] #contactPara {
 }
 
 .email p {
-  width: 321px;
-  height: 29px;
+  width: auto;
+  height: auto;
   text-align: center;
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   color: #f7f2ee;
 
@@ -164,11 +164,11 @@ html[dir="rtl"] #contactPara {
   justify-content: center;
   align-items: center;
   padding: 24px;
-  padding-top: 40px;
+  /* padding-top: 40px; */
   gap: 8px;
 
   width: 95%;
-  height: 146px;
+  height: auto;
   border: 1px solid #0d0e0b;
   border-radius: 24px;
 
@@ -178,8 +178,8 @@ html[dir="rtl"] #contactPara {
 }
 
 .call h5 {
-  width: 81px;
-  height: 29px;
+  width: auto;
+  height: auto;
 
   font-family: "Inter";
   font-style: normal;
@@ -196,12 +196,12 @@ html[dir="rtl"] #contactPara {
 }
 
 .call p {
-  height: 29px;
+  height: auto;
 
   font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   text-align: center;
   color: #3d4435;
@@ -231,5 +231,47 @@ html[dir="rtl"] #contactPara {
 
   #contactPara {
     width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ContactUsSec {
+    padding: 30px 15px;
+  }
+
+  .infoSec {
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .infoSec h2,
+  html[dir="rtl"] .infoSec h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  #contactPara,
+  html[dir="rtl"] #contactPara {
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  .email, .call {
+    width: 100%;
+    max-width: 320px; 
+    padding: 20px 15px;
+    margin: 0 auto;
+  }
+  
+  .email h5, .call h5 {
+    font-size: 18px;
+  }
+  
+  .email p, .call p {
+    font-size: 16px;
   }
 }

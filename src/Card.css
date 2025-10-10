@@ -48,3 +48,24 @@
   align-self: stretch;
   flex-grow: 0;
 }
+@media (max-width: 575.98px) {
+  #cards {
+    height: auto; 
+    padding: 20px;
+    gap: 8px;
+  }
+  
+  #cardElements h5,
+  html[dir="rtl"] #cardElements h5 {
+    font-size: 20px; 
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  #cardElements p,
+  html[dir="rtl"] #cardElements p {
+    font-size: 14px; 
+    line-height: 1.4;
+    text-align: center;
+  }
+}

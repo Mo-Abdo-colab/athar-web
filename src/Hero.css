@@ -5,7 +5,7 @@
   gap: 20px;
   /* height: 772px; */
   /* width: 100%; */
-
+  min-height: 90vh;
   background-image: linear-gradient(
       rgba(61, 68, 53, 0.6),
       rgba(61, 68, 53, 0.6)
@@ -19,8 +19,16 @@
   position: relative;
 }
 
+.heroCard{
+  padding: 0 1rem;
+  max-width: 900px;
+  width: 100%;
+}
+
 .heroCard h2 {
-  width: min(890px,75vw);
+  width: 100%;
+  max-width: 890px;
+  margin: 0 auto;
   font-weight: 600;
   font-size: 48px;
   line-height: 64px;
@@ -36,8 +44,9 @@
 }
 
 html[dir="rtl"] .heroCard h2 {
-  width: min(500px,75vw); /* for mob view */
+  max-width: 890px;
   height: auto;
+  margin: 0 auto;
 
   font-family: "IBM Plex Sans Arabic";
   font-style: normal;
@@ -56,8 +65,9 @@ html[dir="rtl"] .heroCard h2 {
 
 .heroCard a {
   background-color: #e7d9cb;
-  padding: 8px 22px;
+  padding: 12px 32px;
   border-radius: 16px;
+  font-weight: 500;
 }
 
 html[dir="rtl"] .heroCarda {
@@ -72,4 +82,20 @@ html[dir="rtl"] .heroCarda {
   /* html[dir="rtl"] .heroCard h2 {
     width: 500px;
   } */
+}
+@media (max-width: 991.98px){
+  .heroSection{
+    min-height: 70vh;
+  }
+}
+
+@media (max-width: 576px){
+  .heroCard h2{
+    font-size: 32px;
+    line-height: 40px;
+  }
+  html[dir="rtl"] .heroCard h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }

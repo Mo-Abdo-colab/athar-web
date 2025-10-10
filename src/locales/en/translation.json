@@ -106,7 +106,9 @@
     "phemail": "Enter your email",
     "phaddress": "Enter your address",
     "phphone": "Enter your phone number",
-    "phcountrycode": "Choose your country"
+    "phcountrycode": "Choose your country",
+    "Select Location": "Select Location",
+    "Select This Location": "Select This Location"
   },
   "popup": {
     "title": "Booking Confirmed",

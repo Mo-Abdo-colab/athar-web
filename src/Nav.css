@@ -23,7 +23,7 @@
   flex: none;
   order: 1;
   flex-grow: 0;
-
+  white-space: nowrap;
   font-family: "inter";
   color: white;
 }
@@ -33,8 +33,9 @@
 
   top: 100%;
   left: 0;
-  width: 70vw;
-  margin-left: 70px;
+  width: auto;
+  max-width: 320px;
+  margin: 0 auto;
 
   background: #3d4435;
   z-index: 1050;
@@ -52,6 +53,10 @@
     padding: 0;
     border-radius: 0;
     width: auto;
+    left: auto;
+    right: auto;
+    max-width: none;
+    margin: 0;
   }
 }
 

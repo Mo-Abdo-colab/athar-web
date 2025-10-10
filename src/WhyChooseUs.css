@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 56px 80px;
+  padding: 56px 20px;
   gap: 8px;
   background: #f7f2ee;
   flex: none;
@@ -19,6 +19,8 @@
   flex: none;
   order: 0;
   flex-grow: 0;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .sectionTitle h2 {
@@ -36,14 +38,14 @@
 
 html[dir="rtl"] .sectionTitle h2 {
   width: auto;
-  height: 84px;
+  /* height: 84px; */
 
   font-family: "IBM Plex Sans Arabic";
   font-style: normal;
   font-weight: 800;
   font-size: 56px;
   line-height: 84px;
-  text-align: right;
+  text-align: inherit;
   color: #0d0e0b;
   flex: none;
   order: 0;
@@ -61,9 +63,10 @@ html[dir="rtl"] .sectionTitle h2 {
   order: 1;
   align-self: stretch;
   flex-grow: 0;
+  flex-wrap: wrap;
 }
 #infoCards #cards{
-  width: 23%;
+  width: calc(25% - 15px);
 }
 @media (max-width: 1200px) {
   .sectionTitle h2 {
@@ -77,14 +80,31 @@ html[dir="rtl"] .sectionTitle h2 {
   #infoCards {
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
   }
   #infoCards #cards{
-    width: 40%;
+    width: calc(50% - 10px);
   }
 }
 
 @media (max-width: 992px) {
   #infoCards #cards{
     width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  #infoCards .card-item {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 600px) {
+  .whyChooseUs {
+    padding: 40px 10px;
+  }
+  .sectionTitle h2, html[dir="rtl"] .sectionTitle h2 {
+    font-size: 40px;
+    line-height: 50px;
   }
 }

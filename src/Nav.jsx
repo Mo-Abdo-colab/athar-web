@@ -12,7 +12,7 @@ function Nav() {
     <nav className="navbar-wrapper navbar navbar-expand-lg pt-4" id="subNav">
       <div className="container d-flex align-items-center justify-content-between flex-nowrap">
         {/* Brand */}
-        <NavLink className="navbar-brand me-3 flex-shrink-0" to="/">
+        <NavLink className="navbar-brand flex-shrink-0" to="/">
           <img src={Logo} />
         </NavLink>
         {/* Toggle Button for mobile */}
@@ -79,15 +79,17 @@ function Nav() {
             </li>
           </ul>
         </div>
+        <div className="d-flex align-items-center gap-2 flex-shrink-0">
         {/* Right side: Language Switcher, Globe, and Appointment Button */}
-        <div className="d-flex align-items-center gap-2 flex-shrink-0 ms-3">
-          <LanguageSwitcher />
-          <img src={globe} alt="globe" />
-          {location.pathname !== "/booking" && (
-            <NavLink to="/booking" className="btn m-3" id="bookBtn">
-              {t("navbar.button")}
-            </NavLink>
-          )}
+          <div className="d-flex align-items-center gap-2">
+            <LanguageSwitcher />
+            <img src={globe} alt="globe" />
+            {location.pathname !== "/booking" && (
+              <NavLink to="/booking" className="btn m-3" id="bookBtn">
+                {t("navbar.button")}
+              </NavLink>
+            )}
+          </div>
         </div>
       </div>
     </nav>
