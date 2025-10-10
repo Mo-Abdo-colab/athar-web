@@ -2,6 +2,10 @@
   .navbar-overlay .nav-link {
     color: #fff !important;
   }
+  .navOverlay{
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
 }
 #subNav {
   background-color: #f7f2ee;
@@ -33,9 +37,9 @@
 
   top: 100%;
   left: 0;
-  width: auto;
+  width: calc(100% - 2rem);
   max-width: 320px;
-  margin: 0 auto;
+  margin: 0;
 
   background: #3d4435;
   z-index: 1050;
